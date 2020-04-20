@@ -15,6 +15,7 @@
         >{{item.lable}}</p>
         <div class="item-delete" @click="deleteTask(index)">X</div>
       </li>
+      <li v-if="taskList.length === 0" class="item-none">暂无数据</li>
     </ul>
   </div>
 </template>
@@ -91,6 +92,13 @@ li {
     padding-bottom: 5px;
     border-bottom: 1px solid #dcdfe6;
     color: #333333;
+  }
+  .item-none {
+    height: 40px;
+    line-height: 40px;
+    padding-bottom: 5px;
+    color: #333333;
+    text-align: center;
   }
   .content {
     float: left;
